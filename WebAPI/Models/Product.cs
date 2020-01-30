@@ -11,9 +11,8 @@ namespace WebAPI.Models
 		[Key]
 		public int ProudctID { get; set; }
 		public string ProudctName { get; set; }
-		public Supplier SID { get; set; }
-		public Category CID { get; set; }
-
+		public int SupplierID { get; set; }
+		public int CategoryID { get; set; }
 		public float QuantityPerUnit { get; set; }
 		public decimal UnitPrice { get; set; }
 		public int UnitInStock { get; set; }
