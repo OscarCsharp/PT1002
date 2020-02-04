@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebAPI.Models;
-using WebAPI.Repository;
+using API.Models;
+using API.Repository;
+using Microsoft.AspNetCore.Cors;
 
-namespace WebAPI.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("Policy")]
-
-
-
     public class ProductsController : ControllerBase
     {
         private readonly DataContext _context;
@@ -25,6 +22,7 @@ namespace WebAPI.Controllers
         {
             _context = context;
         }
+
 
         // GET: api/Products
         [HttpGet]
@@ -48,6 +46,8 @@ namespace WebAPI.Controllers
         }
 
         // PUT: api/Products/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(int id, Product product)
         {
@@ -78,11 +78,13 @@ namespace WebAPI.Controllers
         }
 
         // POST: api/Products
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public  IActionResult PostProduct([FromBody] Product product)
+        public async Task<ActionResult<Product>> PostProduct(Product product)
         {
             _context.Products.Add(product);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetProduct", new { id = product.ProudctID }, product);
         }

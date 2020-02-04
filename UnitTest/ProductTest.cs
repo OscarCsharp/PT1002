@@ -5,10 +5,10 @@ namespace UnitTest
 {
 	[TestClass]
 	public class ProductTest
-	{
-		[TestMethod]
-		public void TestMethod1()
-		{
-		}
+	{[TestMethod]
+        public void GetAllProducts_ShouldReturnAllProducts()
+        {
+
+        }
 	}
 }

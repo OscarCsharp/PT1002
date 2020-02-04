@@ -67,9 +67,11 @@ namespace ReatJS.Models
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
 
-                entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
+                entity.Property(e => e.Discontinued).IsRequired();
 
-                entity.Property(e => e.UnitPrice).HasColumnType("decimal(18, 2)");
+                entity.Property(e => e.ProudctName).IsRequired();
+
+                entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)

@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Northwind</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+
+
+	<!-- Fonts and icons -->
+	<script src="assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: { "families": ["Open+Sans:300,400,600,700"] },
+			custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['assets/css/fonts.css'] },
+			active: function () {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/azzara.min.css">
+
+
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="main-header" data-background-color="blue">
+			<!-- Logo Header -->
+			<div class="logo-header">
+
+				<a href="index.html" class="logo">
+					<!-- <img src="assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand"> -->
+					<div style="color:white ; font-weight:bold">Northwind   </div>
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="fa fa-bars"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="fa fa-ellipsis-v"></i></button>
+				<div class="navbar-minimize">
+					<button class="btn btn-minimize btn-rounded">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+		</div>
+		<br></br>
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+
+			<div class="sidebar-background"></div>
+			<div class="sidebar-wrapper scrollbar-inner">
+				<div class="sidebar-content">
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="index.html">
+								<i style="color:light-blue" class="fas fa-home"></i>
+								<p>Home</p>
+								<span class="badge badge-count"></span>
+							</a>
+						</li>
+						<br>
+						<div class="nav-item">
+							<a href="products.html">
+								<i style="color:light-blue" class="fas fa-layer-group"></i>
+								<p>Products </p>
+							</a>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		<form class="needs-validation" novalidate>
+			<div class="main-panel">
+				<div class="content">
+					<div class="page-inner">
+
+						<div class="modal-header text-center">
+							<h1 class="modal-title w-100 font-weight-bold text-primary ml-5">Add Product</h1>
+						</div>
+
+
+						<center>
+							<div class="col-md-8">
+								<div class="card card-with-nav">
+									<div class="card-body">
+
+
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+
+												<div class="form-group">
+													<label for="exampleInputPassword1">Product Name</label>
+													<input type="text" class="form-control" id="addproductname" placeholder="Product Name" required>
+													<div class="invalid-feedback">
+														Please enter Product Name
+													</div>
+												</div>
+
+											</div>
+
+											<div class="col-md-6 mb-3">
+
+												<div class="form-group">
+													<label for="formGroupExampleInput">Supplier</label>
+													<select class="form-control" id="addsupplier" required>
+														<option value="">Select</option>
+													</select>
+													<div class="invalid-feedback">
+														Select Supplier
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="formGroupExampleInput">Category</label>
+													<select class="form-control" id="addcategory" required>
+														<option value="">Select</option>
+													</select>
+													<div class="invalid-feedback">
+														Select Category
+													</div>
+												</div>
+
+											</div>
+
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="exampleInputPassword1">Quantity Per Unit</label>
+													<input type="number" class="form-control" id="addquantity" placeholder="Quantity Per Unit" required>
+													<div class="invalid-feedback">
+														Please enter Product Name
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="exampleInputPassword1">Unit Price</label>
+													<input type="number" step=0.01 class="form-control" id="addunitprice" placeholder="Unit Price" required>
+													<div class="invalid-feedback">
+														Please enter Unit Price
+													</div>
+												</div>
+
+											</div>
+
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="exampleInputPassword1">Unit In Stock</label>
+													<input type="number" class="form-control" id="addstock" placeholder="Unit In Stock" required>
+													<div class="invalid-feedback">
+														Please enter Unit In Stock
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form-row">
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="exampleInputPassword1">Unit On Order</label>
+													<input type="number" class="form-control" id="addunitorder" placeholder="Unit On Order" required>
+													<div class="invalid-feedback">
+														Please enter Unit On Order
+													</div>
+												</div>
+
+											</div>
+
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="exampleInputPassword1">Reorder Level</label>
+													<input type="number" class="form-control" id="addreorderlevel" placeholder="Reorder Level" required>
+													<div class="invalid-feedback">
+														Please enter Reorder Level
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6 mb-3">
+												<div class="form-group">
+													<label for="exampleInputPassword1">Discontinued ?</label>
+													<select class="form-control" id="gender" required>
+														<option value="">Select </option>
+														<option value="">No</option>
+														<option value="">Yes</option>
+													</select>
+													<div class="invalid-feedback">
+														Discontinued ?
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+
+									<div class="text-right mt-3 mb-3">
+										<div class="text-right mt-3 mb-3">
+											<center>
+												<button id="btnApply" class="btn btn-success" onclick="AddProduct()">Add Product</button>
+											</center>
+										</div>
+
+									</div>
+
+								</div>
+
+
+							</div>
+						</center>
+					</div>
+					</div>
+				</div>
+
+		</form>
+
+
+
+
+	</div>
+
+
+
+	<!--   Core JS Files   -->
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+	<!-- Moment JS -->
+	<script src="assets/js/plugin/moment/moment.min.js"></script>
+
+	<!-- Chart JS -->
+	<script src="assets/js/plugin/chart.js/chart.min.js"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- Chart Circle -->
+	<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+
+	<!-- Datatables -->
+	<script src="assets/js/plugin/datatables/datatables.min.js"></script>
+
+	<!-- Bootstrap Notify -->
+	<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+	<!-- Bootstrap Toggle -->
+	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
+	<!-- jQuery Vector Maps -->
+	<script src="assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+	<script src="assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!-- Google Maps Plugin -->
+	<script src="assets/js/plugin/gmaps/gmaps.js"></script>
+
+	<!-- Sweet Alert -->
+	<script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+	<!-- Azzara JS -->
+	<script src="assets/js/ready.min.js"></script>
+
+
+
+
+	<script>
+
+		$(document).ready(function () {
+			//Load the droplists dynamically
+			//Load Products
+			var url = "http://www.skolapi.co.za/api/products";
+
+			$.getJSON(url, function (data) {
+				$('#products').empty();
+				$.each(data, function (key, val) {
+					var row = "<tr><td>" + val.proudctID + "</td> <td>" + val.proudctName + "</td> <td>" + val.supplierID + "</td> <td>" + val.categoryID + "</td> <td>" + val.quantityPerUnit +
+						"</td><td>" + val.unitPrice + "</td> <td>" + val.unitInStock + "</td> <td>" + val.unitOnOrder + "</td> <td>" + val.reorderLevel + "</td> <td>" + val.discontinued + "</td></tr>";
+					$(row).appendTo($('#products'));
+
+				});
+			});
+
+
+			//Supplies
+			var url = "http://www.skolapi.co.za/api/suppliers";
+			$.getJSON(url, function (data) {
+				$.each(data, function (index, value) {
+					// APPEND OR INSERT DATA TO SELECT ELEMENT.
+					$('#addsupplier').append('<option value="' + value.companyName + '">' + value.companyName + '</option>');
+				});
+			});
+
+			//Categories
+			var url = "http://www.skolapi.co.za/api/categories";
+			$.getJSON(url, function (data) {
+				$.each(data, function (index, value) {
+					// APPEND OR INSERT DATA TO SELECT ELEMENT.
+					$('#addcategory').append('<option value="' + value.categoryName + '">' + value.categoryName + '</option>');
+				});
+			});
+
+
+
+		});
+
+
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function () {
+			'use strict';
+
+			window.addEventListener('load', function () {
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				var forms = document.getElementsByClassName('needs-validation');
+
+				// Loop over them and prevent submission
+				var validation = Array.prototype.filter.call(forms, function (form) {
+					form.addEventListener('submit', function (event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						else {
+
+							$(function () {
+								//Gathering data to populate the object
+
+								//get the indexs to use an ID
+								var sup = document.getElementById("addsupplier").selectedIndex;
+								var cat = document.getElementById("addcategory").selectedIndex;
+
+
+
+								var AddProduct = function () {									
+									var product = {
+										ProudctName: document.getElementById("addproductname").value,,
+										SupplierID: sup,
+										CategoryID: sup,
+										QuantityPerUnit: document.getElementById("addquantity").value,
+										UnitPrice: document.getElementById("addunitprice").value,
+										UnitInStock: document.getElementById("addstock").value,
+										UnitOnOrder: document.getElementById("addunitorder").value,
+										ReorderLevel: document.getElementById("addreorderlevel").value,
+										Discontinued: document.getElementById("gender").value
+									};
+
+									//Send Product Details
+									$.ajax({
+										url: "http://www.skolapi.co.za/api/api/products",
+										type: "POST",
+										contentType: "application/json",
+										data: JSON.stringify(product),
+										dataType: "json",
+										success: function (response) {
+											alert(response);
+										},
+										error: function (x, e) {
+											alert('Failed');
+											alert(x.responseText);
+											alert(x.status);
+
+										}
+									});
+								};
+								AddProduct();
+								alert(sup);
+							});
+
+						}
+						form.classList.add('was-validated');
+					}, false);
+				});
+			}, false);
+
+		})();
+
+	</script>
+
+</body>
+</html>

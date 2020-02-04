@@ -14,8 +14,8 @@ namespace ReatJS.Models
         public string ProudctName { get; set; }
         public int SupplierId { get; set; }
         public int CategoryId { get; set; }
-        public float QuantityPerUnit { get; set; }
-        public decimal UnitPrice { get; set; }
+        public int QuantityPerUnit { get; set; }
+        public int UnitPrice { get; set; }
         public int UnitInStock { get; set; }
         public int UnitOnOrder { get; set; }
         public int ReorderLevel { get; set; }

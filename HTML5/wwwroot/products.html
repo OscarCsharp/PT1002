@@ -82,191 +82,12 @@
             <div class="content">
 
                 <div class="row d-flex justify-content-center modalWrapper">
-                    <div class="modal fade addNewInputs" id="Add" tabindex="-1" role="dialog" aria-labelledby="Add" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-
-                            <div class="modal-content">
-                                <div class="modal-header text-center">
-                                    <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add Product</h4>
-                                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Product Name</label>
-                                            <input type="text" class="form-control" id="addproductname" placeholder="Product Name" required>
-                                            <div class="invalid-feedback">
-                                                Please enter Product Name
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Supplier</label>
-                                            <select class="form-control" id="addsupplier" required>
-                                                <option value="">Select</option>
-                                            </select>
-                                            <div class="invalid-feedback">
-                                                Select Supplier
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Category</label>
-                                            <select class="form-control" id="addcategory" required>
-                                                <option value="">Select</option>
-                                            </select>
-                                            <div class="invalid-feedback">
-                                                Select Category
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Quantity Per Unit</label>
-                                            <input type="number" class="form-control" id="addquantity" placeholder="Quantity Per Unit" required>
-                                            <div class="invalid-feedback">
-                                                Please enter Product Name
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Unit Price</label>
-                                            <input type="number" class="form-control" id="addunitprice" placeholder="Unit Price" required>
-                                            <div class="invalid-feedback">
-                                                Please enter Unit Price
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Unit In Stock</label>
-                                            <input type="number" class="form-control" id="addstock" placeholder="Unit In Stock" required>
-                                            <div class="invalid-feedback">
-                                                Please enter Unit In Stock
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Unit On Order</label>
-                                            <input type="number" class="form-control" id="addunitorder" placeholder="Unit On Order" required>
-                                            <div class="invalid-feedback">
-                                                Please enter Unit On Order
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Reorder Level</label>
-                                            <input type="number" class="form-control" id="addreorderlevel" placeholder="Reorder Level" required>
-                                            <div class="invalid-feedback">
-                                                Please enter Reorder Level
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Discontinued ?</label>
-                                            <input type="number" class="form-control" id="adddiscontinued" placeholder="Discontinued ?" required>
-                                            <div class="invalid-feedback">
-                                                Discontinued ?
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button class="btn btn-outline-primary btn-block buttonAdd" style="background-color:limegreen" onclick="addproduct()" id="addproduct">
-                                            Add Product
-                                            <i class="fas fa-paper-plane-o ml-1"></i>
-                                        </button>
-                                    </div>
-
-                                </div>
-
-
-
-
-
-
-
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="modal fade addNewInputs" id="Delete" tabindex="-1" role="dialog" aria-labelledby="Delete" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-
-                            <div class="modal-content">
-
-
-                                <div class="modal-header text-center">
-                                    <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Remove Product</h4>
-                                    <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-
-
-                                <div class="modal-body mx-3">
-                                    <div class="md-form mb-5">
-                                        <input type="text" id="inputName" class="form-control validate">
-                                        <label data-error="wrong" data-success="right" for="inputName">Product ID</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
-                                    <button class="btn btn-outline-primary btn-block buttonAdd" data-dismiss="modal" style="background-color:red">
-                                        Delete
-                                        <i class="fas fa-paper-plane-o ml-1"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <br></br>
+                    <br />
                     <div class="text-center">
-                        <a href="" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#Add">Add Product</a><br>
+                        <a class="btn btn-info btn-rounded btn-sm" href="addproduct.html" role="button">Add Product</a>
                     </div>
-                    <br></br>
-                    <div class="text-center" style="padding-left:50px">
-                        <a href="" class="btn btn-danger btn-sm btn-rounded buttonDelete" data-toggle="modal" data-target="#Delete">Delete Product</a><br>
-                    </div>
-                    <br></br>
+                    <br />
+                    <br /><br />
                 </div>
 
                 <div>
@@ -377,7 +198,7 @@
         $(document).ready(function () {
             //Load the droplists dynamically
             //Load Products
-			var url = "https://localhost:44346/api/products";
+			var url = "http://www.skolapi.co.za/api/products";
 
             $.getJSON(url, function (data) {  
                 $('#products').empty();  
@@ -391,7 +212,7 @@
          
 
             //Supplies
-            var url = "https://localhost:44346/api/suppliers";
+            var url = "https://localhost:44320/api/suppliers";
             $.getJSON(url, function (data) {
                 $.each(data, function (index, value) {
                     // APPEND OR INSERT DATA TO SELECT ELEMENT.
@@ -400,7 +221,7 @@
             });
 
             //Categories
-            var url = "https://localhost:44346/api/categories";
+            var url = "https://localhost:44320/api/categories";
             $.getJSON(url, function (data) {
                 $.each(data, function (index, value) {
                     // APPEND OR INSERT DATA TO SELECT ELEMENT.
@@ -411,8 +232,6 @@
            
 
         });
-
-
 
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -434,32 +253,25 @@
 
                             $(function () {
                                 //Gathering data to populate the object
-                                var Apply = function () {
-                                    var NewApplicant = {
-                                        Name: document.getElementById("name").value,
-                                        Surname: document.getElementById("surname").value,
-                                        IdNumber: document.getElementById("idNumber").value,
-                                        Gender: document.getElementById("gender").value,
-                                        Race: document.getElementById("race").value,
-                                        HomeAddress: document.getElementById("homeAddress").value,
-                                        City: document.getElementById("city").value,
-                                        Province: document.getElementById("state").value,
-                                        Zip: document.getElementById("zipCode").value,
-                                        CellNo: document.getElementById("cellNumber").value,
-                                        Email: document.getElementById("email").value,
-                                        Description: document.getElementById("describe").value,
-                                        Disability: document.getElementById("disability").value,
-                                        AppliedGrade: document.getElementById("grade").value,
-                                        EnrollYear: document.getElementById("year").value,
-                                        Status: "In Process",
+                                var AddProduct = function () {
+                                    var product = {
+                                        ProudctName: document.getElementById("addproductname").value,
+                                        SupplierID: document.getElementById("addsupplier").value,
+                                        CategoryID: document.getElementById("addcategory").value,
+                                        QuantityPerUnit: document.getElementById("addquantity").value,
+                                        UnitPrice: document.getElementById("addunitprice").value,
+                                        UnitInStock: document.getElementById("addstock").value,
+                                        UnitOnOrder: document.getElementById("addunitorder").value,
+                                        ReorderLevel: document.getElementById("addreorderlevel").value,
+                                        Discontinued: document.getElementById("adddiscontinued").value,
                                     };
 
-                                    //Send the Applicant Details
+                                    //Send Product Details
                                     $.ajax({
-                                        url: "http://www.skolapi.co.za/api/applicants",
+                                        url: "https://localhost:44320/api/products",
                                         type: "POST",
                                         contentType: "application/json;charset=utf-8",
-                                        data: JSON.stringify(NewApplicant),
+                                        data: JSON.stringify(product),
                                         dataType: "json",
                                         success: function (response) {
                                             alert(response);
@@ -472,9 +284,7 @@
                                         }
                                     });
                                 };
-                                //Apply();
-                                uploadId();
-                                //goHome();
+                                AddProduct();
                             });
 
                         }
@@ -483,45 +293,8 @@
                 });
             }, false);
 
-        })();
+		})();
 
-
-
-        uploadId = function () {
-            // Get the files
-            var files = $("#idDoc").get(0).files;
-            var fileData = new FormData();
-
-            for (var i = 0; i != files.length; i++) {
-                fileData.append("files", files);
-            }
-
-
-            //Some Parameters
-            //var id = 2555;
-            //var name = "testing";
-            //var objArr = [];
-            //objArr.push({"fName": name,"AppId": id})
-            //JSON Object
-            //fileData.append('objArr', JSON.stringify(objArr));
-
-            //Send the Attachment
-            $.ajax({
-                url: "https://localhost:44314/api/documents",
-                type: "POST",
-                contentType: false, // Not to set any content header
-                processData: false, // Not to process data
-                data: fileData,
-                success: function (data) {
-                    alert("Done");
-                }
-
-            });
-        };
-
-        function goHome() {
-            window.location = "http://www.schoolname.co.za/"
-        };
     </script>
 
 
