@@ -9,7 +9,6 @@ using API.Models;
 using API.Repository;
 using Microsoft.AspNetCore.Cors;
 
-
 namespace API.Controllers
 {
     [Route("api/[controller]")]

@@ -296,7 +296,7 @@
 		$(document).ready(function () {
 			//Load the droplists dynamically
 			//Load Products
-			var url = "http://www.skolapi.co.za/api/products";
+			var url = "https://localhost:44320/api/products";
 
 			$.getJSON(url, function (data) {
 				$('#products').empty();
@@ -310,7 +310,7 @@
 
 
 			//Supplies
-			var url = "http://www.skolapi.co.za/api/suppliers";
+			var url = "https://localhost:44320/api/suppliers";
 			$.getJSON(url, function (data) {
 				$.each(data, function (index, value) {
 					// APPEND OR INSERT DATA TO SELECT ELEMENT.
@@ -319,7 +319,7 @@
 			});
 
 			//Categories
-			var url = "http://www.skolapi.co.za/api/categories";
+			var url = "https://localhost:44320/api/categories";
 			$.getJSON(url, function (data) {
 				$.each(data, function (index, value) {
 					// APPEND OR INSERT DATA TO SELECT ELEMENT.
@@ -373,7 +373,7 @@
 
 									//Send Product Details
 									$.ajax({
-										url: "http://www.skolapi.co.za/api/api/products",
+										url: "https://localhost:44320/api/products",
 										type: "POST",
 										contentType: "application/json",
 										data: JSON.stringify(product),
